@@ -22,7 +22,6 @@ function submitTodo() {
         createdAt: createdAt,
         cleared: false,
     }
-    console.log(newTodo)
     emit('add-todo', newTodo)
 
 }

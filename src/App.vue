@@ -23,7 +23,6 @@ const items = reactive([
 
 function appAction(newTodo) {
   items.push(newTodo)
-  console.log(newTodo)
 }
 
 </script>
