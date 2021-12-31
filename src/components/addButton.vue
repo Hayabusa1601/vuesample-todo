@@ -30,7 +30,6 @@ function submitTodo() {
         createdAt: createdAt,
         cleared: false,
     }
-    console.log(newTodo)
     //add-todo関数にnewTodoとしてemit
     emit('add-todo', newTodo)
 

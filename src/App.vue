@@ -27,7 +27,6 @@ const items = reactive([
 //ToDoListの追加処理
 function appAction(newTodo) {
   items.push(newTodo)
-  console.log(newTodo)
 }
 
 </script>
