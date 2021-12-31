@@ -4,7 +4,7 @@
 import ToDoList from './components/ToDoList.vue';
 import Header from './components/Header.vue';
 import addButton from './components/addButton.vue';
-import { reactive } from "@vue/reactivity";
+import { reactive } from "vue";
 
 //ToDoListに渡す本体
 const items = reactive([
