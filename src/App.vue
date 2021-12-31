@@ -5,6 +5,8 @@ import ToDoList from './components/ToDoList.vue';
 import Header from './components/Header.vue';
 import addButton from './components/addButton.vue';
 import { reactive } from "@vue/reactivity";
+
+//ToDoListに渡す本体
 const items = reactive([
   {
     id: 0,
@@ -13,7 +15,8 @@ const items = reactive([
     cleared: false,
   },
 
-  {id: 1,
+  {
+   id: 1,
    todoName: "掃除する",
    createdAt: "2021年12月31日",
    cleared: false,
@@ -21,6 +24,7 @@ const items = reactive([
 
 ]);
 
+//ToDoListの追加処理
 function appAction(newTodo) {
   items.push(newTodo)
   console.log(newTodo)
@@ -30,8 +34,11 @@ function appAction(newTodo) {
 
 <template>
   <div class="container">
+    <!--ヘッダー-->
     <Header title="ToDo List" />
+    <!--ToDoListの呼び出し-->
     <ToDoList :todos="items" />
+    <!--追加ボタンの呼び出し-->
     <addButton msg="追加" @add-todo="appAction"/>
   </div>
 </template>
